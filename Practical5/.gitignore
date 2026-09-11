@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+
+# Debug files
+*.pdb
+
+# Visual Studio cache
+*.cache
+
+# NuGet packages
+packages/
+
+# Temporary files
+*.tmp
+*.log
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
