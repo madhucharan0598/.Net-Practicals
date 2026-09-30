@@ -1,0 +1,58 @@
+﻿@model List<Practical7.Models.Feedback>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Feedback List</title>
+</head>
+
+<body>
+
+    <h1>Feedback List</h1>
+
+    <hr />
+
+    <br />
+
+    <table border="1" cellpadding="5">
+
+        <tr>
+            <th>Enrollment No</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Rating</th>
+            <th>Comments</th>
+        </tr>
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.EnrollmentNo</td>
+                <td>@i.Name</td>
+                <td>@i.Subject</td>
+                <td>@i.Rating</td>
+                <td>@i.Comments</td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+    <hr />
+    <br />
+
+    @Html.ActionLink("Go Back To Home", "Index", "Feedback")
+
+    <br />
+    <br />
+
+    @Html.ActionLink("Give Another Feedback", "Create", "Feedback")
+
+</body>
+</html>

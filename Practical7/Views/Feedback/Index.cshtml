@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Student Feedback Management System</h1>
+        <hr /><br />
+        @Html.ActionLink("Give Feedback", "Create", "Feedback")
+        <br /><br />
+        @Html.ActionLink("View Feedback", "List", "Feedback")
+    </div>
+</body>
+</html>
