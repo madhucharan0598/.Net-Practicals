@@ -1,7 +1,7 @@
 ﻿@model Practical7.Models.Feedback
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
 }
 
 <!DOCTYPE html>
@@ -13,8 +13,7 @@
 </head>
 
 <body>
-
-    <h2>Student Feedback Form</h2>
+    @Html.Partial("~/Views/Shared/_PartialView.cshtml")
 
     @using (Html.BeginForm())
     {
