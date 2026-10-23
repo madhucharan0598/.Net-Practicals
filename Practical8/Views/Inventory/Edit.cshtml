@@ -1,0 +1,42 @@
+﻿@model Practical8.Models.Product
+
+<h2>Edit Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.ProductId)
+
+    <p>Product Name:</p>
+    @Html.TextBoxFor(m => m.ProductName, new
+    {
+        required = "required",
+        maxlength = "100"
+    })
+
+    <p>Quantity:</p>
+    @Html.TextBoxFor(m => m.Quantity, new
+    {
+        type = "number",
+        min = "0",
+        required = "required"
+    })
+
+    <p>Price:</p>
+    @Html.TextBoxFor(m => m.Price, new
+    {
+        type = "number",
+        min = "0",
+        step = "0.01",
+        required = "required"
+    })
+
+    <p>
+        <input type="submit" value="Update Product" />
+    </p>
+}
+
+<p>
+    @Html.ActionLink("Back to Inventory", "Index")
+</p>
